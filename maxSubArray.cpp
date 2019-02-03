@@ -65,7 +65,7 @@ int main() {
         2,
         -5,
     };
-    cout << maxSubArray1(a, 0, sizeof(a) / sizeof(a[0])) << endl;
-    cout << maxSubArray2(a, 0, sizeof(a) / sizeof(a[0])) << endl;
-    cout << maxSubArray3(a, 0, sizeof(a) / sizeof(a[0])) << endl;
+    cout << maxSubArray1(a, 0, sizeof(a) / sizeof(a[0]) - 1) << endl;
+    cout << maxSubArray2(a, 0, sizeof(a) / sizeof(a[0]) - 1) << endl;
+    cout << maxSubArray3(a, 0, sizeof(a) / sizeof(a[0]) - 1) << endl;
 }

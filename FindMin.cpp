@@ -5,11 +5,12 @@ using namespace std;
  * 返回0
  */
 int FindMin(int a[], int begin, int end) {
+    int pivot = a[begin];
     while (begin < end) {
         int median = (begin + end) / 2;
-        if (a[median] > a[begin])
+        if (a[median] > pivot)
             begin = median + 1;
-        else if (a[median] < a[begin])
+        else if (a[median] < pivot)
             end = median;
         else
             assert(0);
