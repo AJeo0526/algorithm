@@ -55,7 +55,16 @@ int maxSubArray3(int a[], int begin, int end) {
     return max;
 }
 int main() {
-    int a[] = {1,-2,3,10,-4,7,2,-5,};
+    int a[] = {
+        1,
+        -2,
+        3,
+        10,
+        -4,
+        7,
+        2,
+        -5,
+    };
     cout << maxSubArray1(a, 0, sizeof(a) / sizeof(a[0])) << endl;
     cout << maxSubArray2(a, 0, sizeof(a) / sizeof(a[0])) << endl;
     cout << maxSubArray3(a, 0, sizeof(a) / sizeof(a[0])) << endl;
