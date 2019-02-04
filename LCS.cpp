@@ -1,5 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
+/* LCS --> LIS
+ */
 int LCS(char *str1, char *str2) {
     int len1 = strlen(str1), len2 = strlen(str2);
     int array[len1 + 1][len2 + 1];
