@@ -1,6 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 // the space of next has been allocated
+// next[i]表示s[0,1,...,i-1]中最长的前后缀的重合长度
+// 例：若next[i]=k，则前缀为next[0,1,...,k-1]
+//                    后缀为next[i-k+1,...,i-2,i-1]
+//                  即当next[i]失配时和next[k]进行比较
 void calNext(char *s, int *next) {
     int len = strlen(s);
     // initial
