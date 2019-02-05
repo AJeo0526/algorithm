@@ -19,6 +19,22 @@ void calNext(char *s, int *next) {
          }
      }
  }
+ /* 寻找周期字符串s中的最小周期子串
+  *  abababab --> ab
+  *  思路：
+  *   首先证明如果strlen(s) % len == 0表示s为周期串
+  *    记长度为len的字符串为大写字母
+  *    则可以设字符串s可以表示为ABCDE
+  *    由 len = strlen(s) - next[strlen(s)]
+  *    可得 ABCD == BCDE
+  *    => A = B = C = D = E
+  *    即A为s的一个周期
+  *    使用反证法易得A为s的最小周期
+  *    而next[strlen(s)]表示s的最大子串重合程度即N-1个最小周期串
+  *    s为N个最小周期串
+  *    则最小周期串长为len = strlen(s) - next[strlen(s)]
+  *    最小周期串为s的前len个字符
+  */
  void powerString(char *s) {
      int *next = new int[strlen(s) + 1];
      calNext(s, next);
