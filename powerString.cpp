@@ -20,6 +20,7 @@ void calNext(char *s, int *next) {
      }
  }
  /* 寻找周期字符串s中的最小周期子串
+  * 注意：必须使用经典next数组，不能使用next数组的变种，详见下面的证明部分
   *  abababab --> ab
   *  思路：
   *   首先证明如果strlen(s) % len == 0表示s为周期串
