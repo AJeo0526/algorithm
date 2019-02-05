@@ -12,7 +12,12 @@ void calNext(char *s, int *next) {
         if (k == -1 || s[i] == s[k]) {
             ++i;
             ++k;
-            next[i] = k;
+            // 改进的kmp算法
+            if (s[i] == s[k]) {
+                next[i] = next[k];
+            } else {
+                next[i] = k;
+            }
         } else {
             k = next[k];
         }
@@ -32,7 +37,7 @@ int KMP(char *target, char *pattern) {
         } else {
             j = next[j];
         }
-        if(j == patLen) {
+        if (j == patLen) {
             ans = i - patLen;
             break;
         }
